@@ -12,7 +12,7 @@ dependencies:
     specifier: ^3.1.2
     version: 3.1.2
   '@astrojs/starlight':
-    specifier: ^0.21.4
+    specifier: ^0.21.5
     version: 0.21.5(astro@4.6.1)
   '@astrojs/starlight-tailwind':
     specifier: ^2.0.1
