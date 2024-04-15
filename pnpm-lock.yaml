@@ -68,7 +68,7 @@ devDependencies:
     specifier: ^0.5.13
     version: 0.5.13(prettier-plugin-astro@0.13.0)(prettier@3.2.5)
   typescript:
-    specifier: ^5.4.4
+    specifier: ^5.4.5
     version: 5.4.5
 
 packages:
