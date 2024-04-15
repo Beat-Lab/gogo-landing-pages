@@ -5,7 +5,7 @@ import TabContent from "../../ui/blocks/TabContent.astro";
 import Icon from "../../ui/icons/Icon.astro";
 
 // Define props from Astro
-const { title, tabs } = Astro.props;
+const { id, title, tabs } = Astro.props;
 
 // Define TypeScript interface for tab object
 interface Tab {
@@ -20,12 +20,14 @@ interface Tab {
 
 // Define TypeScript interface for props
 interface Props {
+  id?: string;
   title?: string;
   tabs: Tab[];
 }
 ---
 
 <section
+id="services"
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
   <div class="relative p-6 md:p-16">

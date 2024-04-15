@@ -40,7 +40,7 @@ const avatarSrcs: Array<string> = [
         class="text-yellow-500 dark:text-yellow-400">Nunca Habia Sido Tan Facil!</span>`
     subTitle="Experimenta el poder total sobre tu vehículo con nuestra aplicación innovadora: monitorea, gestiona y optimiza cada aspecto de tu auto con facilidad y eficiencia, todo desde la palma de tu mano"
     primaryBtn="Descargar"
-    primaryBtnURL="https://play.google.com/store/apps/details?id=com.gogo.beatlab&pli=1"
+    primaryBtnURL="https://play.google.com/store/apps/details?id=com.gogo.beatlab"
     secondaryBtn="Contactanos"
     secondaryBtnURL="/contact"
     withReview={true}
@@ -58,89 +58,91 @@ const avatarSrcs: Array<string> = [
   />
 
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+    id="products"
+    title="Somos lo que tu vehículo necesita"
+    subTitle="Con GOGO, tu vehículo está en buenas manos. Descubre nuestras características y servicios de vanguardia que te ayudarán a mantener tu vehículo en óptimas condiciones."
     src={featureImage}
     alt="ScrewFast products in floating boxes"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+    id="¨services"
+    title=`Así <span class="text-yellow-500 dark:text-yellow-400">Funciona</span> nuestra app.`
     tabs={[
       {
-        heading: "Cutting-Edge Tools",
+        heading: "Registrar tu vehículo",
         content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
+          "Registra tu vehículo en la aplicación GOGO y accede a un panel de control personalizado para tu vehículo.",
         svg: "tools",
-        src: tools,
+        src: construction,
         alt: "Yellow and black heavy equipment on brown grass field",
         first: true,
       },
       {
-        heading: "Intuitive Dashboards",
+        heading: "Registras el kilometraje",
         content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
+          "Registra el kilometraje de tu vehículo y recibe notificaciones en tiempo real sobre el mantenimiento y las reparaciones necesarias.",
         svg: "dashboard",
         src: dashboard,
         alt: "A screenshot or graphic representation of the intuitive dashboard",
         second: true,
       },
       {
-        heading: "Robust Features",
+        heading: "Personaliza la frecuencia de mantenimiento",
         content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
+          "Personaliza la frecuencia de mantenimiento de tu vehículo y recibe recordatorios automáticos para mantener tu vehículo en óptimas condiciones.",
         svg: "house",
-        src: construction,
+        src: tools,
         alt: "Gray metal building frame near tower crane during daytime",
       },
     ]}
   />
 
   <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
+    title="Lo que dicen de nosotros"
+    subTitle="Nuestros clientes satisfechos hablan por sí mismos"
     ;
     testimonials={[
       {
         content:
-          "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
-        author: "Samantha Ruiz",
-        role: "Chief Operating Officer | ConstructIt Inc.",
+          "GoGo me ha ayudado a mantener mi vehículo en óptimas condiciones. La aplicación es fácil de usar y me ha ahorrado mucho tiempo y dinero.",
+        author: "Laura Diaz",
+        role: "Cliente",
         avatarSrc:
           "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
       },
     ]}
     statistics={[
       {
-        count: "70k+",
+        count: "600k+",
         description:
-          "customers equipped — from DIY to major construction firms",
+          "Vehículos publicos registrados en la aplicación GOGO",
       },
       {
-        count: "35%",
+        count: "70%",
         description:
-          "uptick in project efficiency with ScrewFast tools and services",
+          "de los usuarios reportan una mejora en la eficiencia de su vehículo",
       },
       {
-        count: "15.3%",
+        count: "80%",
         description:
-          "reduction in maintenance costs reported by long-term clients",
+          "de los usuarios reportan una disminución en los costos de mantenimiento",
       },
       {
         count: "2x",
-        description: "quicker assembly using innovative fastening solutions",
+        description: "Aumento en la vida útil del vehículo",
       },
     ]}
   />
 
-  <PricingSection pricing={pricing} />
+  <!-- <PricingSection pricing={pricing} /> -->
 
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+  <FAQ title="Preguntas <br />Frecuentes" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Descarganos Gratis"
+    subTitle="Descarga la aplicación GOGO y comienza a disfrutar de todas las funciones y servicios que ofrecemos."
+    url="https://play.google.com/store/apps/details?id=com.gogo.beatlab"
   />
 </MainLayout>
