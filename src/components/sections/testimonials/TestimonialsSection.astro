@@ -31,50 +31,115 @@ type StatProps = {
 };
 ---
 
-<section
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
->
-  <!-- Container for the testimonials -->
-  <div
-    class="lg:grid lg:grid-cols-12 lg:items-center lg:justify-between lg:gap-16"
-  >
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+  <div class="lg:grid lg:grid-cols-12 lg:items-center lg:justify-between lg:gap-16">
     <div class="lg:col-span-5 lg:col-start-1">
-      <!-- Title and Subtitle -->
       <div class="mb-8">
-        <h2
-          class="mb-2 text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
-        >
+        <h2 class="mb-2 text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl">
           {title}
         </h2>
-        {subTitle &&
-        <p class="text-neutral-600 dark:text-neutral-400">
-          {subTitle}
-        </p>
-      }
+        {subTitle && <p class="text-neutral-600 dark:text-neutral-400">{subTitle}</p>}
       </div>
 
-      <!-- Generate a blockquote for each testimonial in the testimonials array by mapping over the array. -->
-      { testimonials &&
-        testimonials.map((testimonial) => (
-        <TestimonialItem content={testimonial.content} author={testimonial.author} role={testimonial.role} avatarSrc={testimonial.avatarSrc} />
-        ))
-      }
-    </div>
-{ statistics &&
-    <div class="mt-10 lg:col-span-6 lg:col-end-13 lg:mt-0">
-      <div class="space-y-6 sm:space-y-8">
-        <ul
-          class="grid grid-cols-2 divide-x-2 divide-y-2 divide-neutral-300 overflow-hidden dark:divide-neutral-700"
-        >
-          <!-- Generate a list item for each stat in the statistics array by mapping over the array. -->
-          {
-            statistics.map((stat, index) => (
-            <StatsGrid count={stat.count} description={stat.description} index={index}/>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
+      <!-- Contenedor del slider con desplazamiento automático -->
+    <!-- Contenedor del slider -->
+<div 
+class="relative w-full overflow-x-auto md:overflow-hidden"
+id="slider-container"
+>
+<div 
+  id="testimonial-slider"
+  class="flex gap-4 transition-transform mb-4 duration-500 ease-in-out"
+>
+  {testimonials &&
+    [...testimonials, ...testimonials].map((testimonial, index) => (
+      <TestimonialItem 
+      key={index}
+        content={testimonial.content} 
+        author={testimonial.author} 
+        role={testimonial.role} 
+        avatarSrc={testimonial.avatarSrc} 
+        class="min-w-[300px] max-w-xs"
+      />
+    ))
   }
+</div>
+</div>
+
+    </div>
+
+    {statistics && (
+      <div class="mt-10 lg:col-span-6 lg:col-end-13 lg:mt-0">
+        <div class="space-y-6 sm:space-y-8">
+          <ul class="grid grid-cols-2 divide-x-2 divide-y-2 divide-neutral-300 overflow-hidden dark:divide-neutral-700">
+            {statistics.map((stat, index) => (
+              <StatsGrid count={stat.count} description={stat.description} index={index} />
+            ))}
+          </ul>
+        </div>
+      </div>
+    )}
   </div>
 </section>
+
+<!-- Script para manejar el slider automático -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.getElementById("testimonial-slider");
+    const sliderContainer = document.getElementById("slider-container");
+
+    function checkScreenSize() {
+      return window.matchMedia("(min-width: 1024px)").matches;
+    }
+
+    function enableAutoScroll() {
+      let slideWidth = slider.firstElementChild.clientWidth + 16;
+      let scrollAmount = 0;
+      let interval;
+
+      function moveSlider() {
+        if (!slider) return;
+
+        if (scrollAmount + slideWidth >= slider.scrollWidth / 2) {
+          slider.style.transition = "none";
+          scrollAmount = 0;
+        } else {
+          slider.style.transition = "transform 0.5s ease-in-out";
+          scrollAmount += slideWidth;
+        }
+
+        slider.style.transform = `translateX(-${scrollAmount}px)`;
+      }
+
+      function startAutoScroll() {
+        interval = setInterval(moveSlider, 3000);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(interval);
+      }
+
+      startAutoScroll();
+      sliderContainer?.addEventListener("mouseenter", stopAutoScroll);
+      sliderContainer?.addEventListener("mouseleave", startAutoScroll);
+    }
+
+    function enableManualScroll() {
+      slider.style.transform = "none"; // Permite scroll manual
+      sliderContainer.style.overflowX = "auto"; // Habilita desplazamiento horizontal
+      sliderContainer.style.scrollSnapType = "x mandatory"; // Ajusta desplazamiento
+    }
+
+    function setupSlider() {
+      if (checkScreenSize()) {
+        enableAutoScroll();
+      } else {
+        enableManualScroll();
+      }
+    }
+
+    setupSlider();
+    window.addEventListener("resize", setupSlider);
+  });
+</script>
+

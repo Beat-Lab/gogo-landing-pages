@@ -1,6 +1,7 @@
 ---
 // Import the Image component from astro:assets
 import { Image } from "astro:assets";
+import 'animate.css';
 
 // Destructure the component properties from Astro.props
 const { id, aria, src, alt, first, second } = Astro.props;
@@ -46,7 +47,7 @@ This is the full example:
   <Image
     src={src}
     alt={alt}
-    class={secondClass}
+    class={"lg:w-[25vw] w-full lg:h-[80vh] h-40 object-cover animate__animated animate__bounceIn"}
     draggable={"false"}
     format={"avif"}
     loading={"eager"}

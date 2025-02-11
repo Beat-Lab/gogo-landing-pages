@@ -10,14 +10,14 @@ import TestimonialsSection from "@/components/sections/testimonials/Testimonials
 import PricingSection from "@/components/sections/pricing/PricingSection.astro";
 import FAQ from "@/components/sections/FAQ.astro";
 import AnnouncementBanner from "@/components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@/images/hero-image.png";
+import heroImage from "@/images/feature-images.png";
 import faqs from "@/data_files/faqs.json";
 import features from "@/data_files/features.json";
 import pricing from "@/data_files/pricing.json";
 import featureImage from "@/images/feature-images.png";
-import construction from "@/images/construction-image.avif";
-import tools from "@/images/automated-tools.avif";
-import dashboard from "@/images/dashboard-image.avif";
+import construction from "@/images/black-car.avif";
+import tools from "@/images/maintenance.jpg";
+import dashboard from "@/images/kilometer.avif";
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -27,17 +27,12 @@ const avatarSrcs: Array<string> = [
 ];
 ---
 
-<MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
+<MainLayout title="GoGo">
 
   <HeroSection
     title=`
     Con GOGO, !Darle Vida A Tu Vehículo  <span
-        class="text-yellow-500 dark:text-yellow-400">Nunca Habia Sido Tan Facil!</span>`
+     class="text-purple-500 dark:bg-transparent leading-[1.5] dark:text-purple-500">Nunca Habia Sido Tan Facil!</span>`
     subTitle="Experimenta el poder total sobre tu vehículo con nuestra aplicación innovadora: monitorea, gestiona y optimiza cada aspecto de tu auto con facilidad y eficiencia, todo desde la palma de tu mano"
     primaryBtn="Descargar"
     primaryBtnURL="https://play.google.com/store/apps/details?id=com.gogo.beatlab"
@@ -52,23 +47,81 @@ const avatarSrcs: Array<string> = [
     alt="Stack of ScrewFast product boxes containing assorted hardware tools"
   />
 
-  <ClientsSection
-    title="Somos lideres en la industria"
-    subTitle="Las empresas confían en nosotros"
-  />
-
   <FeaturesGeneral
     id="products"
     title="Somos lo que tu vehículo necesita"
     subTitle="Con GOGO, tu vehículo está en buenas manos. Descubre nuestras características y servicios de vanguardia que te ayudarán a mantener tu vehículo en óptimas condiciones."
-    src={featureImage}
     alt="ScrewFast products in floating boxes"
     features={features}
   />
 
+  <section
+    class="from-indigo-500 flex w-full flex-col items-center xl:items-start justify-between gap-8 bg-gradient-to-br to-purple-600 px-8 py-16 text-center dark:text-white md:flex-row"
+  >
+    <div
+      class="flex flex-col items-start text-start md:w-[55%]"
+    >
+      <h2 class="mb-6 text-2xl font-bold md:text-4xl">
+        Gestiona tus Finanzas con GoGo
+      </h2>
+      <p class="mb-8 text-lg">
+        Lleva el control de tus ingresos y gastos de manera sencilla. Fija metas
+        diarias y mantén tu economía en equilibrio con herramientas avanzadas de
+        análisis y reportes detallados.
+      </p>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div
+          class="dark:bg-gray-700 rounded-2xl bg-white p-6 dark:bg-opacity-50 dark:text-white"
+        >
+          <h3 class="mb-2 text-2xl font-semibold">📊 Control de Finanzas</h3>
+          <p>
+            Visualiza fácilmente tus ingresos y gastos, categorizados para mayor
+            claridad. Obtén gráficos interactivos y reportes personalizados.
+          </p>
+        </div>
+        <div
+          class="dark:bg-gray-700 rounded-2xl bg-white p-6 dark:bg-opacity-50"
+        >
+          <h3 class="mb-2 text-2xl font-semibold">🎯 Metas Diarias</h3>
+          <p>
+            Establece metas financieras diarias y monitorea tu progreso en
+            tiempo real con recordatorios y alertas inteligentes.
+          </p>
+        </div>
+        <div
+          class="dark:bg-gray-700 rounded-2xl bg-white p-6 dark:bg-opacity-50"
+        >
+          <h3 class="mb-2 text-2xl font-semibold">
+            📅 Planificación Financiera
+          </h3>
+          <p>
+            Organiza tus finanzas con herramientas de planificación avanzada y
+            proyecciones de ahorro.
+          </p>
+        </div>
+        <div
+          class="dark:bg-gray-700 rounded-2xl bg-white p-6 dark:bg-opacity-50"
+        >
+          <h3 class="mb-2 text-2xl font-semibold">
+            🔔 Notificaciones y Alertas
+          </h3>
+          <p>
+            Recibe alertas sobre gastos inusuales, fechas de pago y
+            oportunidades de ahorro.
+          </p>
+        </div>
+      </div>
+      <button
+        class="text-indigo-600 hover:bg-indigo-100 dark:bg-gray-700 mt-8 rounded-xl bg-white px-6 py-3 font-semibold shadow-md transition-all dark:text-black dark:hover:bg-gray-600"
+      >
+        Descubre Más
+      </button>
+    </div>
+    <img class="md:w-[35%]" src="/src/images/financeFeature.png" alt="" />
+  </section>
   <FeaturesNavs
     id="¨services"
-    title=`Así <span class="text-yellow-500 dark:text-yellow-400">Funciona</span> nuestra app.`
+    title=`Así <span class="text-purple-300 dark:text-purple-600">Funciona</span> nuestra app.`
     tabs={[
       {
         heading: "Registrar tu vehículo",
@@ -106,18 +159,41 @@ const avatarSrcs: Array<string> = [
     testimonials={[
       {
         content:
-          "GoGo me ha ayudado a mantener mi vehículo en óptimas condiciones. La aplicación es fácil de usar y me ha ahorrado mucho tiempo y dinero.",
-        author: "Laura Diaz",
-        role: "Cliente",
+          "Desde que uso GoGo, puedo realizar un seguimiento preciso de los mantenimientos de mi coche y evitar sorpresas. ¡Realmente me ha facilitado la vida!",
+        author: "Carlos Ramírez",
+        role: "Conductor",
         avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+          "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+      },
+      {
+        content:
+          "GoGo me permite llevar el control de todo lo relacionado con el mantenimiento de mi auto. ¡Es la herramienta perfecta para cualquier conductor!",
+        author: "Sofía González",
+        role: "Profesional de la salud",
+        avatarSrc:
+          "https://miro.medium.com/v2/resize:fit:525/1*lyyXmbeoK5JiIBNCnzzjjg.png",
+      },
+      {
+        content:
+          "Siempre he sido escéptico con las apps para autos, pero GoGo realmente superó mis expectativas. La interfaz es simple y se ha convertido en mi asistente personal para el mantenimiento.",
+        author: "José Martínez",
+        role: "Ingeniero",
+        avatarSrc:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXRqw1LBo0VNFI20L91Nczv2G9pmv97NXDtg&s",
+      },
+      {
+        content:
+          "Gracias a GoGo, ahora tengo todo organizado: mantenimientos, recordatorios y más. ¡Ya no tengo que preocuparme por el estado de mi vehículo!",
+        author: "María López",
+        role: "Empresaria",
+        avatarSrc:
+          "https://startupsuccessstories.in/wp-content/uploads/2019/07/HireXP-launches-Amara-an-embodied-conversational-Chatbot-in-India.png",
       },
     ]}
     statistics={[
       {
         count: "600k+",
-        description:
-          "Vehículos publicos registrados en la aplicación GOGO",
+        description: "Vehículos registrados en la aplicación GOGO",
       },
       {
         count: "70%",

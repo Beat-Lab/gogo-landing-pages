@@ -24,7 +24,7 @@ const { id, title, subTitle, src, alt, features } = Astro.props;
 
 <section
   id={id}
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  class="mx-auto max-w-[85rem] mt-20 px-4 pb-10 sm:px-6 lg:px-8 lg:pb-14 2xl:max-w-full"
 >
   <!-- Block to display the feature image -->
   <div class="relative mb-6 overflow-hidden md:mb-8">
@@ -33,7 +33,7 @@ const { id, title, subTitle, src, alt, features } = Astro.props;
         <Image
           src={src}
           alt={alt}
-          class="h-[80%] w-[80%] object-cover object-center m-auto"
+          class="h-[75%] w-[75%] object-cover object-center m-auto"
           draggable={"false"}
           format={"avif"}
           loading={"eager"}
