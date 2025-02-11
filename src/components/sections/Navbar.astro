@@ -87,9 +87,11 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
       >
         <!-- Navigation links and Authentication component -->
         {strings.navBarLinks.map(link => (
-          <NavLink url={link.url} name={link.name} />
+        <>
+           {link.name != "Contacto" ? <NavLink url={link.url} name={link.name} /> :
+          <a target="_blank" class="px-4 py-3 h-10 my-4 flex items-center justify-center font-bold text-md rounded-xl text-white bg-[#25d366]" href="https://wa.me/573213710614?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20%20GoGo%20">Contáctanos</a>}
+        </>
         ))}
-
         <!-- <Authentication /> -->
         <!-- <LanguagePicker /> -->
         <!-- ThemeIcon component specifically for larger screens -->

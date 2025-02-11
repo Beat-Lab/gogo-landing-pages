@@ -28,7 +28,7 @@ interface Props {
 
 <section
 id="services"
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  class="mx-auto max-w-[85rem] bg-neutral-100 lg:bg-transparent px-4 py-10 rounded-xl sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
   <div class="relative p-6 md:p-16">
     <div
@@ -54,7 +54,7 @@ id="services"
                 content={tab.content}
                 first={tab.first}
               >
-                <Icon name={tab.svg} />
+                <Icon color="text-purple-200" name={tab.svg} />
               </TabNav>
             ))
           }

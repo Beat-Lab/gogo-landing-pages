@@ -1,29 +1,33 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Pregúntanos cualquier cosa sobre nuestra aplicación y servicios, y recibe respuestas rápidas y precisas.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "¿La aplicación es gratuita?",
+      "answer": "¡Sí! Nuestra aplicación es completamente gratuita y puedes disfrutar de todas sus funciones sin ningún costo."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "¿Qué funciones están incluidas en la aplicación?",
+      "answer": "Nuestra aplicación incluye el seguimiento básico de mantenimiento de tu vehículo, recordatorios de servicios importantes como cambios de aceite, inspecciones y más. También puedes acceder a una base de datos con consejos de mantenimiento, guías de reparación y un historial completo de tu vehículo."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "¿Puedo agregar más de un vehículo a la aplicación?",
+      "answer": "¡Sí! Puedes agregar tantos vehículos como desees a tu cuenta. Esto te permitirá hacer un seguimiento de cada uno de ellos y recibir notificaciones personalizadas según sus necesidades de mantenimiento."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "¿La aplicación ofrece descuentos en talleres asociados?",
+      "answer": "Actualmente, la aplicación no ofrece descuentos directos en talleres asociados. Sin embargo, te proporcionamos una lista de talleres recomendados para que puedas comparar precios y servicios de manera fácil y rápida."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "¿Qué tipo de soporte al cliente puedo esperar?",
+      "answer": "Ofrecemos soporte al cliente a través de chat en vivo y correo electrónico. Nos esforzamos por responder a todas tus dudas lo más rápido posible para garantizar que puedas mantener tu vehículo en las mejores condiciones."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "¿Con qué frecuencia se actualizan las funciones y los recursos de la aplicación?",
+      "answer": "Actualizamos la aplicación regularmente para mejorar la experiencia del usuario y agregar nuevas funcionalidades. Las actualizaciones incluyen nuevas características, correcciones de errores y contenido relevante sobre el mantenimiento y cuidado de tu vehículo."
+    },
+    {
+      "question": "¿La aplicación ofrece soluciones para flotas de vehículos?",
+      "answer": "Sí, ofrecemos herramientas que pueden ayudarte a gestionar múltiples vehículos, lo que resulta útil si tienes una flota. Puedes agregar varios autos, llevar un registro de su mantenimiento y recibir alertas sobre servicios necesarios para cada uno."
     }
   ]
 }
