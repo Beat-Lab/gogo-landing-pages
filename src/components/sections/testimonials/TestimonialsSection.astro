@@ -54,12 +54,11 @@ id="slider-container"
   {testimonials &&
     [...testimonials, ...testimonials].map((testimonial, index) => (
       <TestimonialItem 
-      key={index}
         content={testimonial.content} 
         author={testimonial.author} 
         role={testimonial.role} 
         avatarSrc={testimonial.avatarSrc} 
-        class="min-w-[300px] max-w-xs"
+        key={index}
       />
     ))
   }
@@ -93,9 +92,10 @@ id="slider-container"
     }
 
     function enableAutoScroll() {
+      if (!slider || !slider.firstElementChild) return;
       let slideWidth = slider.firstElementChild.clientWidth + 16;
       let scrollAmount = 0;
-      let interval;
+      let interval: NodeJS.Timeout;
 
       function moveSlider() {
         if (!slider) return;
@@ -125,9 +125,15 @@ id="slider-container"
     }
 
     function enableManualScroll() {
-      slider.style.transform = "none"; // Permite scroll manual
-      sliderContainer.style.overflowX = "auto"; // Habilita desplazamiento horizontal
-      sliderContainer.style.scrollSnapType = "x mandatory"; // Ajusta desplazamiento
+      if (slider) {
+        slider.style.transform = "none"; // Permite scroll manual
+      }
+      if (sliderContainer) {
+        sliderContainer.style.overflowX = "auto"; // Habilita desplazamiento horizontal
+      }
+      if (sliderContainer) {
+        sliderContainer.style.scrollSnapType = "x mandatory"; // Ajusta desplazamiento
+      }
     }
 
     function setupSlider() {
